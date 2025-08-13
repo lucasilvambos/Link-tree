@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meus Links</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #00b4fc;
+    }
+
+    h1 {
+      margin: 10px 0;
+      color: #333;
+      font-size: 24px;
+    }
+
+    .link {
+      display: block;
+      background-color: #000000;
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .link:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="linksContainer">
+   
+  </div>
+
+  <script>
+    
+    const userData = {
+      nome: "Lucas",
+      foto: "assets/avatar.jpg", 
+      email: "lucasambos@gmail.com",
+      whatsapp: "5551998106203", 
+      site: "https://cafeteria-sooty.vercel.app/",
+      instagram: "https://instagram.com/seuusuario",
+      linkedin: "https://www.linkedin.com/in/seuusuario"
+    };
+
+    
+    document.getElementById("linksContainer").innerHTML = `
+      <img src="${userData.foto}" alt="Foto de Perfil" class="profile-img" />
+      <h1>${userData.nome}</h1>
+
+      <a class="link" href="mailto:${userData.email}">📧 Email</a>
+      <a class="link" href="https://wa.me/${userData.whatsapp}" target="_blank">💬 WhatsApp</a>
+      <a class="link" href="${userData.site}" target="_blank">🌐 Meu Site</a>
+      <a class="link" href="${userData.instagram}" target="_blank">📸 Instagram</a>
+      <a class="link" href="${userData.linkedin}" target="_blank">💼 LinkedIn</a>
+
+      <div class="footer">1996-2025 Lucas Ambos. Todos os direitos reservados.</div>
+    `;
+  </script>
+
+</body>
+</html>
